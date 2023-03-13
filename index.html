@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <title>Registration Form</title>
+
+    <style>
+      * {
+        margin: 0;
+
+        padding: 0;
+
+        box-sizing: border-box;
+      }
+
+      body {
+        background: gray;
+
+        display: flex;
+
+        align-items: center;
+
+        justify-content: center;
+
+        height: 100vh;
+      }
+
+      .container {
+        max-width: 650px;
+
+        padding: 28px;
+
+        margin: 0 28px;
+
+        box-shadow: 0 15px 20px #abb289;
+      }
+
+      h1 {
+        font-size: 26px;
+
+        font-weight: 500;
+
+        text-align: left;
+
+        color: #2f4f4f;
+
+        padding-bottom: 8px;
+      }
+
+      hr {
+        color: black;
+
+        margin-top: 10px;
+
+        margin-bottom: 10px;
+      }
+
+      .content {
+        display: flex;
+
+        flex-wrap: wrap;
+
+        justify-content: space-between;
+
+        padding: 20px 0;
+      }
+
+      .input-box {
+        display: flex;
+
+        flex-wrap: wrap;
+
+        width: 50%;
+
+        padding-bottom: 15px;
+      }
+
+      .input-box:nth-child(2n) {
+        justify-content: end;
+      }
+
+      .input-box label {
+        width: 95%;
+      }
+
+      .input-box input {
+        height: 40px;
+
+        width: 95%;
+
+        padding: 0 15px;
+
+        border-radius: 5px;
+
+        border: 1px solid #ccc;
+
+        outline: none;
+      }
+
+      .input-box input:is(:focus) {
+        box-shadow: 0 3px 6px rgba(0, 0, 0, 0.2);
+      }
+
+      button {
+        width: 100%;
+
+        margin-top: 10px;
+
+        padding: 10px;
+
+        display: block;
+
+        font-size: 20px;
+
+        color: black;
+
+        border: none;
+
+        border-radius: 5px;
+      }
+    </style>
+  </head>
+
+  <body>
+    <div class="container">
+      <form action="#" onsubmit="getDetails(event)">
+        <h1>Book A Call</h1>
+
+        <p>
+          Book a call slot nad our representative will call you within 1hr of
+          selected time.
+        </p>
+
+        <hr />
+
+        <div class="content">
+          <div class="input-box">
+            <label for="name">Name</label>
+
+            <input type="text" id="user" name="name" />
+          </div>
+
+          <br />
+
+          <div class="input-box">
+            <label for="email">Email</label>
+
+            <input type="email" id="email" name="email" />
+          </div>
+
+          <br />
+
+          <div class="input-box">
+            <label for="phone">Phone:</label>
+
+            <input
+              type="number"
+              id="phone"
+              name="phone"
+              maxlength="10"
+              required
+            />
+          </div>
+
+          <br />
+
+          <div class="input-box">
+            <label for="time">Time To Call</label>
+
+            <input type="date" id="time" name="time" value="2022-12-10" />
+
+            <label for="hour"></label>
+
+            <input
+              type="time"
+              id="hour"
+              name="hour"
+              min="09:00"
+              max="18:00"
+              value="11:00"
+              required
+            />
+
+            <br />
+          </div>
+
+          <button type="submit">Submit</button>
+        </div>
+      </form>
+    </div>
+
+    <script>
+      function getDetails(event) {
+        event.preventDefault()
+
+        console.log( new Animation())
+        console.log(event.target.name.value)
+        console.log(event.target.email.value)
+        console.log(event.target.phone.value)
+        console.log(event.target.time.value)
+        console.log(event.target.hour.value)
+      }
+    </script>
+  </body>
+</html>
